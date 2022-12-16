@@ -9,7 +9,11 @@ function Todo({ todo, deleteTodo, toggleTodo }) {
         todo.isCompleted ? styles.completedTodo : ''
       }`}>
       <RiTodoFill className={styles.todoIcon} />
-      <div className={styles.todoText}>{todo.text}</div>
+      <div className={styles.todoText}>
+        <h2>Имя пользователя: {todo.text.username}</h2>
+        <h3>Email: {todo.text.email}</h3>
+        <p>Задание: {todo.text.textTodo}</p>
+      </div>
       <RiDeleteBin2Line
         className={styles.deleteIcon}
         onClick={() => deleteTodo(todo.id)}
