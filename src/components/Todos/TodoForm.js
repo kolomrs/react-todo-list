@@ -2,21 +2,19 @@ import { useState } from 'react';
 import Button from '../Ui/Button';
 // import styles from './TodoForm.module.css';
 
+const initialState = {
+  username: '',
+  email: '',
+  textTodo: '',
+};
+
 function TodoForm({ addTodo }) {
-  const [formState, setFormState] = useState({
-    username: '',
-    email: '',
-    textTodo: '',
-  });
+  const [formState, setFormState] = useState(initialState);
 
   const onSubmitHandler = (event) => {
     event.preventDefault();
     addTodo(formState);
-    setFormState({
-      username: '',
-      email: '',
-      textTodo: '',
-    });
+    setFormState(initialState);
   };
 
   const onChangehandler = (e) => {
