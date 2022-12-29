@@ -60,7 +60,7 @@ function TodoForm({ addTodo, completedTodosExist }) {
     <div className="form-control mb-3 bg-light">
       <form onSubmit={onSubmitHandler}>
         <label htmlFor="username">Имя пользователя</label>
-        <p style={{ color: 'red' }}>{errors && errors.username}</p>
+        <p className="text-danger">{errors && errors.username}</p>
         <input
           name="username"
           className="form-control mb-3"
@@ -70,7 +70,7 @@ function TodoForm({ addTodo, completedTodosExist }) {
         />
 
         <label htmlFor="email">Email</label>
-        <p style={{ color: 'red' }}>{errors && errors.email}</p>
+        <p className="text-danger">{errors && errors.email}</p>
         <input
           name="email"
           className="form-control mb-3"
@@ -79,7 +79,7 @@ function TodoForm({ addTodo, completedTodosExist }) {
           onChange={onChangehandler}
         />
         <label htmlFor="textTodo">Текст задачи</label>
-        <p style={{ color: 'red' }}>{errors.textTodo}</p>
+        <p className="text-danger">{errors.textTodo}</p>
         <input
           name="textTodo"
           className="form-control mb-3"
